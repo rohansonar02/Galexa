@@ -1,0 +1,39 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif; /* Set a clean font */
+    overflow: hidden; /* Prevent scrolling */
+    background-color: black; /* Black background for space effect */
+}
+
+/* Style for planet labels */
+#planet-info {
+    position: absolute;
+    top: 20px; /* Positioning */
+    left: 20px;
+    color: white; /* White text for visibility */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for spacing */
+    font-size: 14px; /* Font size for readability */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Style for planet hover effects */
+.planet {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #planet-info {
+        font-size: 12px; /* Smaller font size on mobile */
+        padding: 8px; /* Adjust padding */
+    }
+}

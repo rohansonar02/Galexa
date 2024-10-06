@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the Exoplanet</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      overflow: hidden;
+    }
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      z-index: 10;
+    }
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: flicker 3s infinite ease-in-out;
+    }
+    @keyframes flicker {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    h1, p {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: fadeInUp 1s forwards;
+    }
+    p {
+      animation-delay: 0.5s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .astronaut {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      animation: float 5s infinite alternate ease-in-out;
+    }
+    .astronaut img {
+      width: 100%;
+      height: auto;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+      100% { transform: translateY(0) rotate(-5deg); }
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    .btn:hover {
+        text-decoration: none;
+      background-color: blue;
+      transform: scale(1.05);
+    }
+    .btn:active {
+      transform: scale(0.95);
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(2);
+      }
+    }
+
+    @keyframes zoomOut {
+      0% {
+        transform: scale(2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .zoom-in {
+      animation: zoomIn 1s forwards;
+    }
+
+    .zoom-out {
+      animation: zoomOut 1s forwards;
+    }
+  </style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<div class="container">
+  <h1>Explore the Exoplanet</h1>
+  <h2>Embark on an interstellar journey through the wonders of space</h2>
+
+  <div class="astronaut">
+    <img src="images/image.png" alt="Floating Astronaut">
+  </div>
+
+  <button class="btn"><a href="index.html">Start Your Journey</a></button>
+</div>
+<script src="script.js"></script>
+<body>
+  
+</body>
+</html>
